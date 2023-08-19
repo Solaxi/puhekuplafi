@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiFillLinkedin, AiFillGithub, AiFillInstagram, AiFillMail, AiFillEnvironment, AiFillPhone} from 'react-icons/ai'
+import {AiFillMail, AiFillEnvironment, AiFillPhone} from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -22,12 +22,6 @@ const Footer = () => {
           <p>045 166 0858</p>
         </li>
       </ul>
-
-      <div className='flex text-xl text-black gap-4 mt-2 md:justify-center'>
-        <AiFillLinkedin /> 
-        <AiFillGithub />
-        <AiFillInstagram />
-      </div>
 
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
 
