@@ -3,7 +3,7 @@ import {AiFillMail, AiFillEnvironment, AiFillPhone} from 'react-icons/ai'
 
 const Footer = () => {
   return (
-    <section id="footer" className='mt-5 rounded bg-gradient-to-t from-teal-500 to-white py-8 px-8'>
+    <section id="footer" className='mt-0 rounded bg-gradient-to-t from-teal-500 to-white py-8 px-8'>
     <div className='text-black md:text-center'>
       <h1 className='font-medium text-lg'>Yhteystiedot</h1>
       <p>Y-tunnus: 2451327-3 </p>
