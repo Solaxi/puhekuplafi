@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <main className='bg-white/80 px-8 md:px-20 lg:px-40 pb-1'>
     <section id='home' className='min-h-screen text-center flex flex-col justify-center '>
-      <img src='paula2.jpg' alt='' className='mb-5 mx-auto rounded-full w-72 md:w-96' />
+      <img src='paula2.jpg' alt='' className='mb-5 mt-20 md:mt-5 mx-auto rounded-full w-72 md:w-96' />
       <h1 className='text-3xl md:text-5xl font-medium text-teal-500'>Paula Poutanen</h1>
       <h3 className='text-xl md:text-2xl'>Puheterapeutti</h3>
       <p className='text-md py-5 text-gray-800 md:text-xl'>Tarjoan puheterapiapalveluita Pirkanmaan ja Kanta-Hämeen alueella koti-, päiväkoti- ja koulukäynteinä. Palvelu on suunnattu ensisijaisesti suomenkielisille lapsille, mutta ohjaus ja terapia onnistuvat myös englannin kielellä.</p>
