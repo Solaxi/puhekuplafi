@@ -1,8 +1,17 @@
 import React from 'react'
 
 const HomePage = () => {
+
+  const ServiceCard = ({title, desc, img}) => 
+    <div className='bg-white w-full shadow-lg rounded-md px-4 py-5 flex flex-col items-center text-center gap-3 transition ease-in-out hover:scale-105 duration-300'>
+      <img src={img} className='w-72 rounded-md opacity-90' alt='' />
+      <h2 className='text-xl'>{title}</h2>
+      <p className='text-gray-500'>{desc}</p>
+    </div>
+
+
   return (
-    <main className='bg-white/80 px-8 md:px-20 lg:px-40 pb-1'>
+    <main className='bg-white/90 px-8 md:px-20 lg:px-40 pb-1 max-w-7xl m-auto shadow-lg'>
     <section id='home' className='min-h-screen text-center flex flex-col justify-center '>
       <img src='paula2.jpg' alt='' className='mb-5 mt-20 md:mt-5 mx-auto rounded-full w-72 md:w-96' />
       <h1 className='text-3xl md:text-5xl font-medium text-teal-500'>Paula Poutanen</h1>
@@ -12,24 +21,23 @@ const HomePage = () => {
 
     <section id='service' className=''>
       <div className='mt-4 flex flex-col md:flex-row gap-8'>
-        <div className='bg-white w-full shadow-lg rounded-md px-4 py-5 flex flex-col items-center text-center gap-3'>
-          <img src='puheterapia.jpg' className='w-72 rounded-md opacity-90' alt='' />
-          <h2 className='text-xl'>Puheterapia</h2>
-          <p className='text-gray-500'>Puheterapia on lääkinnällistä kuntoutusta, tavoitteena on ennaltaehkäistä, arvioida sekä kuntouttaa vuorovaikutuksen, puheen ja kielen kehitykseen liittyviä haasteita. </p>
-        </div>
+        <ServiceCard 
+          title='Puheterapia'
+          desc='Puheterapia on lääkinnällistä kuntoutusta, tavoitteena on ennaltaehkäistä, arvioida sekä kuntouttaa vuorovaikutuksen, puheen ja kielen kehitykseen liittyviä haasteita.'
+          img='puheterapia.jpg'
+        />
 
-        <div className='bg-white w-full shadow-lg rounded-md px-4 py-5 flex flex-col items-center text-center gap-3'>
-          <img src='puhekupla.jpg' className='w-72 rounded-md opacity-90' alt='' />
-          <h2 className='text-xl'>Puhekupla</h2>
-          <p className='text-gray-500'>Puhekupla perustettiin 2011, ja siitä lähtien olen toiminut yksityisenä puheterapeuttina työskennellen lähinnä lasten parissa.</p>
-        </div>
+        <ServiceCard 
+          title='Puhekupla'
+          desc='Puhekupla perustettiin 2011, ja siitä lähtien olen toiminut yksityisenä puheterapeuttina työskennellen lähinnä lasten parissa.'
+          img='puhekupla.jpg'
+        />
 
-        <div className='bg-white w-full shadow-lg rounded-md px-4 py-5 flex flex-col items-center text-center gap-3'>
-          <img src='koulutus.jpg' className='w-72 rounded-md opacity-90' alt='' />
-          <h2 className='text-xl'>Koulutus</h2>
-          <p className='text-gray-500'>Olen valmistunut Tampereen yliopistosta 2009. Olen toiminut puheterapeuttina Valkeakosken terveyskeskuksessa sekä Akaan terveyskeskuksessa ja sittemmin perhekeskuksessa.</p>
-        </div>
-
+        <ServiceCard 
+          title='Koulutus'
+          desc='Olen valmistunut Tampereen yliopistosta 2009. Olen toiminut puheterapeuttina Valkeakosken terveyskeskuksessa sekä Akaan terveyskeskuksessa ja sittemmin perhekeskuksessa.'
+          img='koulutus.jpg'
+        />
       </div>
     </section>
 
