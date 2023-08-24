@@ -9,6 +9,13 @@ const HomePage = () => {
       <p className='text-gray-500'>{desc}</p>
     </div>
 
+  const ListCard = ({title, list}) => 
+    <div className='mt-4 pl-4 md:w-3/6'>
+        <p className="font-bold my-2">{title}</p>
+        <ul className='list-disc pl-4'>
+          {list.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
+    </div>
 
   return (
     <main className='bg-white/90 px-8 md:px-20 lg:px-40 pb-1 max-w-7xl m-auto shadow-lg'>
@@ -41,41 +48,35 @@ const HomePage = () => {
       </div>
     </section>
 
-    <section id='honor' className='my-20'>
+    <section id='lists' className='my-20'>
     <div className='bg-white flex rounded shadow-md flex-col md:flex-row px-2 py-4'>
-      <div className='mt-4 pl-4 md:w-3/6'>
-        <p className="font-bold my-2">Otan vastaan asiakkaita, joilla on maksusitoumus</p>
-        <ul className='list-disc pl-4'>
-          <li>KELAsta</li>
-          <li>Pirkanmaan sairaanhoitopiiriltä</li>
-          <li>Omasta kotikunnasta</li>
-          <li>Vakuutusyhtiöstä</li>
-        </ul>
-      </div>
-      <div className='mt-4 pl-4 md:w-3/6'>
-        <p className="font-bold my-2">Erityisosaamistani on</p>
-        <ul className='list-disc pl-4'>
-          <li>kielellisten taitojen kuntoutus</li>
-          <li>äännevirheiden kuntoutus</li>
-          <li>epäselvän puheen kuntoutus</li>
-          <li>vuorovaikutustaitojen kuntoutus</li>
-          <li>puhetta tukevan ja korvaavan kommunikaation (aac) ohjaus, erityisesti kuvien käyttö</li>
-          <li>kommunikaation tukena (GoTalkNow, kommunikaatiokansiot, toimintataulut)</li>
-        </ul>
-      </div>
-      <div className='mt-4 pl-4 md:w-3/6'>
-        <p className="font-bold my-2">Viimeisimmät täydennyskoulutukset</p>
-        <ul className='list-disc px-4'>
-          <li>It Takes Two To Talk® The Hanen Program® for Parents of Children with Language Delays</li>
-          <li>Oral Placement Therapy, OPT 1 ja OPT 2</li>
-          <li>Lapsen oikeus osallistua kuntoutumiseensa (LOOK-hanke)</li>
-          <li>Lasten syömisen vaikeuksien arviointi ja kuntoutus</li>
-          <li>Kipinää ja käytännön ideoita kuvakommunikointiin</li>
-          <li>Autismin kirjon vaikeuden puheterapeutin näkökulmasta</li>
-          <li>Lapsilähtöinen leikki välineenä puheterapeutin arjessa</li>
-        </ul>
-      </div>
-    </div>
+      <ListCard title='Otan vastaan asiakkaita, joilla on maksusitoumus'
+        list={[
+          'KELAsta', 
+          'Pirkanmaan sairaanhoitopiiriltä', 
+          'omasta kotikunnasta', 
+          'vakuutusyhtiöstä']}
+      />
+      <ListCard title='Erityisosaamistani on'
+        list={[
+          'kielellisten taitojen kuntoutus', 
+          'äännevirheiden kuntoutus', 
+          'epäselvän puheen kuntoutus', 
+          'vuorovaikutustaitojen kuntoutus',
+          'puhetta tukevan ja korvaavan kommunikaation (aac) ohjaus, erityisesti kuvien käyttö',
+          'kommunikaation tukena (GoTalkNow, kommunikaatiokansiot, toimintataulut)']}
+      />
+      <ListCard title='Viimeisimmät täydennyskoulutukset'
+        list={[
+          'It Takes Two To Talk® The Hanen Program® for Parents of Children with Language Delays', 
+          'Oral Placement Therapy, OPT 1 ja OPT 2', 
+          'Lapsen oikeus osallistua kuntoutumiseensa (LOOK-hanke)', 
+          'Lasten syömisen vaikeuksien arviointi ja kuntoutus',
+          'Kipinää ja käytännön ideoita kuvakommunikointiin',
+          'Autismin kirjon vaikeuden puheterapeutin näkökulmasta',
+          'Lapsilähtöinen leikki välineenä puheterapeutin arjessa']}
+      />
+     </div>
     </section>
 
     </main>
